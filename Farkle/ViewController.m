@@ -7,8 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "DieLabel.h"
 
-@interface ViewController ()
+@interface ViewController () <DieLabelDelegate>
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel1;
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel2;
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel3;
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel4;
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel5;
+
+@property (strong, nonatomic) IBOutlet DieLabel *dieLabel6;
 
 @end
 
@@ -16,12 +29,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dieRolledWithValue:(int)value {
+    self.dieLabel1.text = [NSString stringWithFormat:@"%d", value];
+    self.dieLabel2.text = [NSString stringWithFormat:@"%d", value];
+    self.dieLabel3.text = [NSString stringWithFormat:@"%d", value];
+    self.dieLabel4.text = [NSString stringWithFormat:@"%d", value];
+    self.dieLabel5.text = [NSString stringWithFormat:@"%d", value];
+    self.dieLabel6.text = [NSString stringWithFormat:@"%d", value];
+
 }
+
+
+
+
+
 
 @end

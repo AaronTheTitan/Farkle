@@ -14,6 +14,7 @@
 		91B09D061A66FE2500E4122B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B09D051A66FE2500E4122B /* Images.xcassets */; };
 		91B09D091A66FE2500E4122B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B09D071A66FE2500E4122B /* LaunchScreen.xib */; };
 		91B09D151A66FE2500E4122B /* FarkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B09D141A66FE2500E4122B /* FarkleTests.m */; };
+		91B09D201A66FECE00E4122B /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B09D1F1A66FECE00E4122B /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		91B09D0E1A66FE2500E4122B /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B09D131A66FE2500E4122B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91B09D141A66FE2500E4122B /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
+		91B09D1E1A66FECE00E4122B /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		91B09D1F1A66FECE00E4122B /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				91B09CFF1A66FE2500E4122B /* ViewController.h */,
 				91B09D001A66FE2500E4122B /* ViewController.m */,
 				91B09D021A66FE2500E4122B /* Main.storyboard */,
+				91B09D1E1A66FECE00E4122B /* DieLabel.h */,
+				91B09D1F1A66FECE00E4122B /* DieLabel.m */,
 				91B09D051A66FE2500E4122B /* Images.xcassets */,
 				91B09D071A66FE2500E4122B /* LaunchScreen.xib */,
 				91B09CF81A66FE2500E4122B /* Supporting Files */,
@@ -222,6 +227,7 @@
 				91B09D011A66FE2500E4122B /* ViewController.m in Sources */,
 				91B09CFE1A66FE2500E4122B /* AppDelegate.m in Sources */,
 				91B09CFB1A66FE2500E4122B /* main.m in Sources */,
+				91B09D201A66FECE00E4122B /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
