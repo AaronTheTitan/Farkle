@@ -71,6 +71,16 @@
                                     <outletCollection property="gestureRecognizers" destination="QUe-h4-2On" appends="YES" id="rg3-gK-Mwg"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-uu-Kdt">
+                                <rect key="frame" x="143" y="403" width="60" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRollButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fOR-Pq-cH0"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-dR-auh" customClass="DieLabel">
                                 <rect key="frame" x="81" y="321" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,32 +107,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="txd-NF-E9w" userLabel="Tap Gesture Recognizer (1)">
                     <connections>
-                        <action selector="onDieTapped1:" destination="rQG-yl-Y9G" id="aqN-nv-XH9"/>
+                        <action selector="onDieTapped:" destination="rQG-yl-Y9G" id="5Bs-Kx-BU1"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Ygb-C6-kBS" userLabel="Tap Gesture Recognizer (2)">
                     <connections>
-                        <action selector="onDieTapped2:" destination="0rF-Me-7oO" id="pB0-fO-2ev"/>
+                        <action selector="onDieTapped:" destination="0rF-Me-7oO" id="jJK-Rb-1jy"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="pYY-dX-MYc" userLabel="Tap Gesture Recognizer (3)">
                     <connections>
-                        <action selector="onDieTapped3:" destination="0p6-CC-wEp" id="bOy-CT-Qxm"/>
+                        <action selector="onDieTapped:" destination="0p6-CC-wEp" id="Nyk-IK-4pb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="6lM-nd-U58" userLabel="Tap Gesture Recognizer (4)">
                     <connections>
-                        <action selector="onDieTapped4:" destination="Q7m-Rq-jvR" id="pba-wh-s3q"/>
+                        <action selector="onDieTapped:" destination="Q7m-Rq-jvR" id="ukA-ng-xd3"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="u6q-td-m3f" userLabel="Tap Gesture Recognizer (5)">
                     <connections>
-                        <action selector="onDieTapped5:" destination="OIX-dR-auh" id="J9N-AA-8lJ"/>
+                        <action selector="onDieTapped:" destination="OIX-dR-auh" id="vyU-rw-0LM"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="QUe-h4-2On" userLabel="Tap Gesture Recognizer (6)">
                     <connections>
-                        <action selector="onDieTapped6:" destination="Tvp-4o-w7p" id="PLK-WW-0sB"/>
+                        <action selector="onDieTapped:" destination="Tvp-4o-w7p" id="g10-sD-Phf"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

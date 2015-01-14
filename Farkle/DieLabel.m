@@ -7,39 +7,28 @@
 //
 
 #import "DieLabel.h"
+#import "ViewController.h"
 
 @implementation DieLabel
 
+
+
 - (void) roll {
-    int randomNumber = arc4random_uniform(6) + 1;
-    [self.delegate dieRolledWithValue:randomNumber];
     
+    int randomNumber = arc4random_uniform(6) + 1;
+    self.text = [NSString stringWithFormat:@"%d", randomNumber];
 }
 
 
-- (IBAction)onDieTapped1:(UITapGestureRecognizer *)sender {
+
+
+- (IBAction)onDieTapped:(UITapGestureRecognizer *)sender {
+
+    [self.delegate dieLabelWasTapped:self];
+    self.backgroundColor = [UIColor redColor];
 
 }
 
-- (IBAction)onDieTapped2:(UITapGestureRecognizer *)sender {
-
-}
-
-- (IBAction)onDieTapped3:(UITapGestureRecognizer *)sender {
-
-}
-
-- (IBAction)onDieTapped4:(UITapGestureRecognizer *)sender {
-
-}
-
-- (IBAction)onDieTapped5:(UITapGestureRecognizer *)sender {
-
-}
-
-- (IBAction)onDieTapped6:(UITapGestureRecognizer *)sender {
-
-}
 
 
 @end

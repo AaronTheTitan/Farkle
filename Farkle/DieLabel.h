@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DieLabel;
+
+
 @protocol DieLabelDelegate
 
-- (void) dieRolledWithValue:(int) value;
+- (void)dieLabelWasTapped:(DieLabel *)die;
 
 @end
 

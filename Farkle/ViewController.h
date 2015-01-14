@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property NSMutableArray *diceLabelArray;
+@property NSMutableArray *diceTappedArray;
 
 @end
 

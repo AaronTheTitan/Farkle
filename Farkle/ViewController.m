@@ -12,15 +12,10 @@
 @interface ViewController () <DieLabelDelegate>
 
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel1;
-
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel2;
-
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel3;
-
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel4;
-
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel5;
-
 @property (strong, nonatomic) IBOutlet DieLabel *dieLabel6;
 
 @end
@@ -30,19 +25,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.diceLabelArray = [[NSMutableArray alloc] initWithObjects:self.dieLabel1, self.dieLabel2, self.dieLabel3, self.dieLabel4, self.dieLabel5, self.dieLabel6, nil];
 
 }
 
-- (void)dieRolledWithValue:(int)value {
-    self.dieLabel1.text = [NSString stringWithFormat:@"%d", value];
-    self.dieLabel2.text = [NSString stringWithFormat:@"%d", value];
-    self.dieLabel3.text = [NSString stringWithFormat:@"%d", value];
-    self.dieLabel4.text = [NSString stringWithFormat:@"%d", value];
-    self.dieLabel5.text = [NSString stringWithFormat:@"%d", value];
-    self.dieLabel6.text = [NSString stringWithFormat:@"%d", value];
+
+
+-(void)dieLabelWasTapped:(DieLabel *)die {
+    
+
+    [self.diceLabelArray removeObject:die];
+    [self.diceTappedArray addObject:die];
+
+
+//    NSLog(@"%@", self.diceTappedArray);
 
 }
 
+
+
+
+- (IBAction)onRollButtonPressed:(UIButton *)sender {
+    for (DieLabel *die in self.diceLabelArray) {
+        die.delegate = self;
+        [die roll];
+    }
+}
 
 
 
