@@ -25,8 +25,6 @@
 - (IBAction)onDieTapped:(UITapGestureRecognizer *)sender {
 
     [self.delegate dieLabelWasTapped:self];
-    self.backgroundColor = [UIColor redColor];
-
 }
 
 

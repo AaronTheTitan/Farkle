@@ -20,6 +20,7 @@
 
 @end
 
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -27,30 +28,41 @@
 
     self.diceLabelArray = [[NSMutableArray alloc] initWithObjects:self.dieLabel1, self.dieLabel2, self.dieLabel3, self.dieLabel4, self.dieLabel5, self.dieLabel6, nil];
 
+    for (DieLabel *dieLabel in self.diceLabelArray) {
+
+        dieLabel.delegate = self;
+        dieLabel.backgroundColor = [UIColor grayColor];
+        }
+
+
+}
+
+
+- (IBAction)onRollButtonPressed:(UIButton *)sender {
+    for (DieLabel *die in self.diceLabelArray) {
+        if (die.backgroundColor == [UIColor grayColor]) {
+            [die roll];
+        }
+
+    }
 }
 
 
 
 -(void)dieLabelWasTapped:(DieLabel *)die {
-    
 
     [self.diceLabelArray removeObject:die];
     [self.diceTappedArray addObject:die];
 
+    die.backgroundColor = [UIColor redColor];
 
-//    NSLog(@"%@", self.diceTappedArray);
 
 }
 
 
 
 
-- (IBAction)onRollButtonPressed:(UIButton *)sender {
-    for (DieLabel *die in self.diceLabelArray) {
-        die.delegate = self;
-        [die roll];
-    }
-}
+
 
 
 
